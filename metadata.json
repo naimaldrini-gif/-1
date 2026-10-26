@@ -1,0 +1,6 @@
+{
+  "name": "Student Hub Jordan",
+  "description": "منصة خدمات طلابية متكاملة لجامعة البلقاء التطبيقية والجامعات الأردنية - تبادل كتب، فرص تدريب، سكنات طلابية، ومساعد دراسة ذكي محلي",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

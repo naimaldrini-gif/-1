@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Student Hub Jordan | منصة خدمات طلاب جامعة البلقاء التطبيقية والجامعات الأردنية</title>
+  <meta name="description" content="منصة خدمات طلابية متكاملة لجامعة البلقاء التطبيقية والجامعات الأردنية - تبادل كتب، فرص تدريب، سكنات طلابية، ومساعد دراسة ذكي محلي" />
+  <meta property="og:title" content="Student Hub Jordan | منصة خدمات طلاب جامعة البلقاء التطبيقية والجامعات الأردنية" />
+  <meta property="og:description" content="منصة خدمات طلابية متكاملة لجامعة البلقاء التطبيقية والجامعات الأردنية - تبادل كتب، فرص تدريب، سكنات طلابية، ومساعد دراسة ذكي محلي" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- خطوط جوجل العربية الفاخرة وملف التنسيقات المنفصل -->
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- =======================================================================
+       الشريط العلوي للتنقل والهوية (Site Header)
+       ======================================================================= -->
+  <header class="site-header">
+    <div class="header-container">
+      
+      <!-- شعار المنصة -->
+      <a href="#dashboard" class="brand-identity" data-nav-target="dashboard">
+        <div class="brand-icon-box" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-title">Student Hub Jordan</span>
+          <span class="brand-subtitle">جامعة البلقاء التطبيقية · BAU</span>
+        </div>
+      </a>
+
+      <!-- محدد الجامعة المعتمدة -->
+      <div class="uni-selector-wrap" title="اختر الحرم الجامعي النشط">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"></path>
+        </svg>
+        <label for="global-uni-select" style="cursor: pointer;">الحرم:</label>
+        <select id="global-uni-select">
+          <option value="جامعة البلقاء التطبيقية - المركز (السلط)">جامعة البلقاء التطبيقية - المركز (السلط)</option>
+          <option value="جامعة البلقاء - كلية الهندسة التكنولوجية (البوليتكنك)">جامعة البلقاء - الهندسة التكنولوجية (البوليتكنك)</option>
+          <option value="جامعة البلقاء التطبيقية - كلية الحصن">جامعة البلقاء التطبيقية - كلية الحصن (إربد)</option>
+          <option value="الجامعة الأردنية (عمان)">الجامعة الأردنية (عمان)</option>
+          <option value="جامعة العلوم والتكنولوجيا الأردنية (JUST)">جامعة العلوم والتكنولوجيا الأردنية</option>
+          <option value="الجامعة الهاشمية (الزرقاء)">الجامعة الهاشمية (الزرقاء)</option>
+        </select>
+      </div>
+
+      <!-- قائمة الروابط الرئيسية -->
+      <nav class="primary-nav" aria-label="التنقل الأساسي">
+        <button class="nav-link active" data-nav-target="dashboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          الرئيسية
+        </button>
+        <button class="nav-link" data-nav-target="books">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          تبادل الكتب
+        </button>
+        <button class="nav-link" data-nav-target="internships">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          فرص التدريب
+        </button>
+        <button class="nav-link" data-nav-target="housing">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          السكن الطلابي
+        </button>
+        <button class="nav-link" data-nav-target="ai">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+          مساعد الدراسة الذكي
+        </button>
+        <button class="nav-link" data-nav-target="saved">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+          المفضلة وطلباتي
+        </button>
+      </nav>
+
+      <!-- إجراءات الهيدر السريعة -->
+      <div class="header-actions">
+        <button id="btn-header-add-book" class="btn-primary" title="نشر إعلان كتاب">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          <span>إضافة كتاب</span>
+        </button>
+        <!-- زر القائمة المتنقلة -->
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="فتح القائمة">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- قائمة الجوال المنسدلة -->
+    <div id="mobile-drawer" class="mobile-drawer">
+      <button class="nav-link active" data-nav-target="dashboard">الرئيسية</button>
+      <button class="nav-link" data-nav-target="books">تبادل الكتب الجامعية</button>
+      <button class="nav-link" data-nav-target="internships">فرص التدريب</button>
+      <button class="nav-link" data-nav-target="housing">السكن الطلابي</button>
+      <button class="nav-link" data-nav-target="ai">مساعد الدراسة الذكي</button>
+      <button class="nav-link" data-nav-target="saved">المفضلة وطلباتي</button>
+    </div>
+  </header>
+
+  <!-- =======================================================================
+       الحاوية الرئيسية للأقسام (Main Application Views)
+       ======================================================================= -->
+  <main class="main-wrapper">
+
+    <!-- -------------------------------------------------------------------
+         القسم الأول: لوحة التحكم والصفحة الرئيسية (Dashboard View)
+         ------------------------------------------------------------------- -->
+    <section id="view-dashboard" class="view-section active">
+      
+      <!-- بطاقة الترحيب والهوية البصرية -->
+      <div class="dashboard-hero-card">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            الفصل الدراسي 2026/2027 · مجتمع جامعة البلقاء والجامعات الأردنية
+          </div>
+          <h1 class="hero-heading">منصتك الجامعية الأولى لتبادل الكتب، التدريب، والسكن الطلابي</h1>
+          <p class="hero-lead">
+            صُممت منصة <strong>Student Hub Jordan</strong> لخدمة طلبة جامعة البلقاء التطبيقية والجامعات الأردنية بتجربة محلية سريعة وسلسة بدون تعقيدات، توفر لك كل ما تحتاجه في مسيرتك الأكاديمية في مكان واحد.
+          </p>
+          <div class="hero-actions">
+            <button class="btn-primary" style="background:#ffffff; color:var(--primary-900);" data-nav-target="books">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              تصفح الكتب المتاحة
+            </button>
+            <button class="btn-secondary" style="background:rgba(255,255,255,0.15); color:#fff; border-color:rgba(255,255,255,0.3);" data-nav-target="ai">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"></path></svg>
+              جرّب مساعد الدراسة الذكي
+            </button>
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <img src="/src/assets/images/campus_balqa_hub_1793034351024.jpg" alt="جامعة البلقاء التطبيقية - الحرم الجامعي" />
+        </div>
+      </div>
+
+      <!-- شبكة الإحصائيات التجريبية المباشرة -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          </div>
+          <div>
+            <div id="stat-books-count" class="stat-val tabular-nums">0</div>
+            <div class="stat-label">كتب معروضة للتبادل والبيع</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          </div>
+          <div>
+            <div id="stat-intern-count" class="stat-val tabular-nums">0</div>
+            <div class="stat-label">فرص تدريب ميداني نشطة</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </div>
+          <div>
+            <div id="stat-housing-count" class="stat-val tabular-nums">0</div>
+            <div class="stat-label">سكنات طلابية تجريبية بالسلط</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div>
+            <div id="stat-apps-count" class="stat-val tabular-nums">0</div>
+            <div class="stat-label">طلبات تدريب مرسلة محلياً</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- بطاقات التنقل السريعة للأقسام الأربعة -->
+      <div class="section-header-block" style="margin-bottom: 1.25rem;">
+        <div>
+          <h2 class="section-title">أقسام وخدمات المنصة</h2>
+          <p class="section-desc">تنقل بسلاسة بين خدمات المنصة المصممة لتسهيل حياتك الجامعية اليومية.</p>
+        </div>
+      </div>
+
+      <div class="quick-modules-grid">
+        <div class="module-card" data-nav-target="books">
+          <div class="module-top">
+            <div class="module-icon blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </div>
+            <h3 class="module-title">تبادل الكتب الجامعية</h3>
+            <p class="module-text">استبدل كتبك القديمة أو اعرضها لزملائك الطلبة بأسعار رمزية أو إعارة مجانية لدعم التكافل الطلابي.</p>
+          </div>
+          <div class="module-footer-action">
+            <span>دخول قسم الكتب</span>
+            <span>←</span>
+          </div>
+        </div>
+
+        <div class="module-card" data-nav-target="internships">
+          <div class="module-top">
+            <div class="module-icon emerald">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </div>
+            <h3 class="module-title">فرص التدريب الميداني</h3>
+            <p class="module-text">تصفح فرص التدريب لدى كبرى الشركات الأردنية في عمان والسلط وإربد وقدّم طلبك بضغطة زر واحدة.</p>
+          </div>
+          <div class="module-footer-action">
+            <span>استعراض الفرص</span>
+            <span>←</span>
+          </div>
+        </div>
+
+        <div class="module-card" data-nav-target="housing">
+          <div class="module-top">
+            <div class="module-icon amber">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </div>
+            <h3 class="module-title">السكن الطلابي</h3>
+            <p class="module-text">دليل استرشادي للشقق والغرف المفروشة وقريبة من كليات جامعة البلقاء مع مقارنة الأسعار والخدمات.</p>
+          </div>
+          <div class="module-footer-action">
+            <span>البحث عن سكن</span>
+            <span>←</span>
+          </div>
+        </div>
+
+        <div class="module-card" data-nav-target="ai">
+          <div class="module-top">
+            <div class="module-icon purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"></path></svg>
+            </div>
+            <h3 class="module-title">مساعد الدراسة الذكي</h3>
+            <p class="module-text">ارفع سلايدات محاضراتك (PDF) واحصل على ملخصات فورية واختبر نفسك بأسئلة تفاعلية ذكية محلياً.</p>
+          </div>
+          <div class="module-footer-action">
+            <span>بدء الدراسة الذكية</span>
+            <span>←</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- قسم الإعلانات والفرص الجامعية المحدثة -->
+      <div class="announcements-container">
+        <div class="announcements-head">
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--primary-900);">آخر الأخبار والإعلانات الجامعية</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">مستجدات جامعة البلقاء التطبيقية والنشاطات الطلابية</p>
+          </div>
+          <span style="font-size: 0.82rem; font-weight: 700; color: var(--primary-700);">تحديث مستمر</span>
+        </div>
+        <div id="announcements-list-container" class="announcements-list">
+          <!-- يتم إدراج الإعلانات ديناميكياً بواسطة script.js -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- -------------------------------------------------------------------
+         القسم الثاني: تبادل الكتب الجامعية (Book Exchange View)
+         ------------------------------------------------------------------- -->
+    <section id="view-books" class="view-section">
+      
+      <div class="section-header-block">
+        <div>
+          <h2 class="section-title">تبادل الكتب والمراجع الجامعية</h2>
+          <p class="section-desc">
+            تصفح الكتب المتاحة لدى زملائك في جامعة البلقاء وكليات المملكة، أو انشر إعلان كتابك للبيع بأسعار رمزية أو للإعارة المجانية.
+          </p>
+        </div>
+        <button id="btn-open-add-book" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          نشر إعلان كتاب جديد
+        </button>
+      </div>
+
+      <!-- شريط البحث والتصفية للكتب -->
+      <div class="filters-bar">
+        <div class="search-box-wrap">
+          <svg class="search-icon-inside" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="book-search-input" class="search-input" placeholder="ابحث باسم الكتاب، رمز المادة، التخصص، أو الكلمات المفتاحية..." />
+        </div>
+
+        <select id="book-uni-filter" class="filter-select">
+          <option value="all">جميع الجامعات والكليات</option>
+          <option value="المركز (السلط)">جامعة البلقاء - المركز (السلط)</option>
+          <option value="البوليتكنك">جامعة البلقاء - البوليتكنك</option>
+          <option value="الحصن">جامعة البلقاء - كلية الحصن</option>
+          <option value="الجامعة الأردنية">الجامعة الأردنية</option>
+        </select>
+
+        <select id="book-condition-filter" class="filter-select">
+          <option value="all">جميع الحالات</option>
+          <option value="ممتاز">حالة ممتازة (شبه جديد)</option>
+          <option value="جيد جداً">جيد جداً</option>
+          <option value="جيد">جيد (مستعمل)</option>
+          <option value="مجاني للإعارة">مجاني للإعارة</option>
+        </select>
+
+        <select id="book-sort-filter" class="filter-select">
+          <option value="newest">الترتيب: الأحدث أولاً</option>
+          <option value="price-low">السعر: من الأقل للأعلى</option>
+          <option value="price-high">السعر: من الأعلى للأقل</option>
+        </select>
+      </div>
+
+      <!-- شبكة الكتب -->
+      <div id="books-grid-container" class="books-grid">
+        <!-- يتم رسم الكتب بواسطة JavaScript -->
+      </div>
+
+      <!-- حالة عدم وجود نتائج -->
+      <div id="books-empty-state" class="empty-state-card" style="display: none;">
+        <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        <h3 class="empty-state-title">لا توجد كتب مطابقة لمعايير البحث</h3>
+        <p class="empty-state-desc">جرب تعديل كلمات البحث أو تصفية الحالة والجامعة، أو كن أول من يضيف إعلاناً لهذا الكتاب!</p>
+        <button class="btn-primary" onclick="App.openBookModal(null)">إضافة هذا الكتاب الآن</button>
+      </div>
+
+    </section>
+
+    <!-- -------------------------------------------------------------------
+         القسم الثالث: فرص التدريب الميداني (Internships View)
+         ------------------------------------------------------------------- -->
+    <section id="view-internships" class="view-section">
+      
+      <div class="section-header-block">
+        <div>
+          <h2 class="section-title">فرص التدريب الميداني والعملي</h2>
+          <p class="section-desc">
+            فرص حقيقية وتجريبية موجهة لطلبة كليات تكنولوجيا المعلومات، الهندسة، الأعمال، والعلوم الطبية في الأردن مع إمكانية التقديم الفوري.
+          </p>
+        </div>
+      </div>
+
+      <!-- شريط البحث والتصفية للتدريب -->
+      <div class="filters-bar">
+        <div class="search-box-wrap">
+          <svg class="search-icon-inside" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="intern-search-input" class="search-input" placeholder="ابحث باسم الشركة، المسمى الوظيفي، أو المهارات..." />
+        </div>
+
+        <select id="intern-category-filter" class="filter-select">
+          <option value="all">جميع التخصصات</option>
+          <option value="تكنولوجيا المعلومات">تكنولوجيا المعلومات والبرمجيات</option>
+          <option value="الهندسة">الهندسة والتصاميم</option>
+          <option value="العلوم الطبية">العلوم الطبية والصيدلانية</option>
+          <option value="الأعمال">الأعمال والمالية</option>
+        </select>
+
+        <select id="intern-location-filter" class="filter-select">
+          <option value="all">جميع المواقع</option>
+          <option value="عمان">عمان</option>
+          <option value="السلط">السلط</option>
+          <option value="إربد">إربد</option>
+          <option value="عن بعد">عن بعد / هجين</option>
+        </select>
+      </div>
+
+      <!-- شبكة فرص التدريب -->
+      <div id="internships-grid-container" class="internships-grid">
+        <!-- يتم رسم الفرص ديناميكياً بواسطة script.js -->
+      </div>
+
+      <div id="internships-empty-state" class="empty-state-card" style="display: none;">
+        <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+        </svg>
+        <h3 class="empty-state-title">لم نجد فرص تدريب مطابقة لمعايير البحث الحالية</h3>
+        <p class="empty-state-desc">يرجى تجربة البحث بتصنيف تخصصي آخر أو اختيار "جميع المواقع".</p>
+      </div>
+
+    </section>
+
+    <!-- -------------------------------------------------------------------
+         القسم الرابع: السكن الطلابي (Housing View)
+         ------------------------------------------------------------------- -->
+    <section id="view-housing" class="view-section">
+      
+      <div class="section-header-block">
+        <div>
+          <h2 class="section-title">دليل السكنات الطلابية</h2>
+          <p class="section-desc">
+            استكشف الشقق والغرف والاستوديوهات المفروشة القريبة من الحرم الجامعي لجامعة البلقاء في السلط والمحافظات.
+          </p>
+        </div>
+      </div>
+
+      <!-- تنويه الشفافية القانونية والأمان -->
+      <div class="transparency-banner warning">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+          <line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line>
+        </svg>
+        <div>
+          <strong>تنبيه وإخلاء مسؤولية مهم للطلبة:</strong> كافة العروض والصور المعروضة في هذا القسم هي عروض استرشادية وتجريبية لتوضيح وظائف المنصة الطلابية وليست عروضاً عقارية تعاقدية مؤكدة. ننصح الطلبة وأولياء الأمور دائماً بمعاينة السكن ميدانياً قبل إبرام أي اتفاقيات مالية.
+        </div>
+      </div>
+
+      <!-- فلاتر السكن الطلابي -->
+      <div class="filters-bar">
+        <select id="housing-location-filter" class="filter-select">
+          <option value="all">جميع المناطق والمجمعات</option>
+          <option value="السلط">مدينة السلط (الحرم الرئيسي)</option>
+          <option value="البوابة الشمالية">بجانب بوابة الجامعة الشمالية</option>
+          <option value="شارع الستين">شارع الستين</option>
+          <option value="حي السلالم">حي السلالم الراقي</option>
+        </select>
+
+        <select id="housing-price-filter" class="filter-select">
+          <option value="all">جميع نطاقات الإيجار</option>
+          <option value="under-100">أقل من 100 دينار / شهرياً</option>
+          <option value="100-150">من 100 إلى 150 دينار / شهرياً</option>
+          <option value="above-150">أكثر من 150 دينار / شهرياً</option>
+        </select>
+
+        <select id="housing-type-filter" class="filter-select">
+          <option value="all">جميع أنواع السكنات</option>
+          <option value="طلاب">سكن طلاب (ذكور)</option>
+          <option value="طالبات">سكن طالبات (إناث)</option>
+          <option value="استوديو">استوديو فردي مستقل</option>
+        </select>
+      </div>
+
+      <!-- شبكة السكنات -->
+      <div id="housing-grid-container" class="housing-grid">
+        <!-- يتم رسم السكنات ديناميكياً بواسطة script.js -->
+      </div>
+
+      <div id="housing-empty-state" class="empty-state-card" style="display: none;">
+        <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <h3 class="empty-state-title">لا توجد سكنات مطابقة لخيارات الفلترة الحالية</h3>
+        <p class="empty-state-desc">يرجى توسيع نطاق الإيجار أو اختيار كافة المناطق للاطلاع على الخيارات المتاحة.</p>
+      </div>
+
+    </section>
+
+    <!-- -------------------------------------------------------------------
+         القسم الخامس: مساعد الدراسة بالذكاء الاصطناعي (AI Study Assistant View)
+         ------------------------------------------------------------------- -->
+    <section id="view-ai" class="view-section">
+      
+      <div class="section-header-block">
+        <div>
+          <h2 class="section-title">مساعد الدراسة والتلخيص الذكي</h2>
+          <p class="section-desc">
+            أداتك الذكية لمراجعة المواد الدراسية، رفع السلايدات، توليد ملخصات تفاعلية، واختبار معلوماتك بأسئلة اختيار من متعدد وصح وخطأ.
+          </p>
+        </div>
+      </div>
+
+      <!-- إشعار الشفافية الفنية حول عدم وجود Backend أو API Key خارجي -->
+      <div class="transparency-banner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        <div>
+          <strong>شفافية معمارية النظام:</strong> يعمل هذا المساعد بالكامل داخل متصفحك محلياً (Client-side) دون الحاجة لخوادم خلفية أو مفتاح API خارجي. التلخيص والأسئلة مبنية على نماذج بيانات محلية متقدمة ومعدة هندسياً لتقييم تجربة المستخدم، ومُهيأة في الكود للربط المباشر مع <strong>Google Gemini API</strong> مستقبلاً.
+        </div>
+      </div>
+
+      <!-- شبكة عمودين: محادثة + أدوات رفع PDF والتلخيص والاختبار -->
+      <div class="ai-layout-container">
+        
+        <!-- العمود الأول: واجهة المحادثة العربية التفاعلية -->
+        <div class="ai-chat-card">
+          <div class="ai-chat-header">
+            <div class="ai-agent-identity">
+              <div class="ai-agent-avatar">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 style="font-size: 1rem; font-weight: 800; color: var(--primary-900);">مساعد البلقاء الأكاديمي</h4>
+                <span style="font-size: 0.75rem; color: var(--accent-emerald); font-weight: 700;">جاهز للمساعدة محلياً · ردود فورية</span>
+              </div>
+            </div>
+            <button class="btn-secondary" style="font-size: 0.78rem; padding: 0.35rem 0.65rem;" onclick="document.getElementById('ai-messages-window').innerHTML = ''; showToast('تم مسح المحادثة', 'info');">
+              مسح الشاشة
+            </button>
+          </div>
+
+          <!-- نافذة الرسائل -->
+          <div id="ai-messages-window" class="ai-messages-window">
+            <div class="chat-bubble assistant">
+              مرحباً بك يا زميلي! أنا مساعدك الدراسي الذكي في منصة Student Hub Jordan. كيف يمكنني مساعدتك اليوم في خطتك الأكاديمية أو تنظيم وقت المذاكرة أو فهم مفاهيم موادك؟
+            </div>
+          </div>
+
+          <!-- محفزات سريعة جاهزة -->
+          <div class="chat-quick-prompts">
+            <button class="quick-prompt-btn" data-prompt="كيف أنظم جدول دراسي للامتحانات النصفية؟">
+              📅 جدول الامتحانات
+            </button>
+            <button class="quick-prompt-btn" data-prompt="ما هي شروط التدريب الميداني لطلبة البلقاء؟">
+              💼 شروط التدريب الميداني
+            </button>
+            <button class="quick-prompt-btn" data-prompt="نصائح لاختيار فكرة مشروع التخرج">
+              🎓 أفكار مشاريع التخرج
+            </button>
+          </div>
+
+          <!-- شريط إدخال الرسالة -->
+          <div class="chat-input-bar">
+            <input type="text" id="ai-chat-input" class="chat-text-input" placeholder="اكتب سؤالك الأكاديمي أو استفسارك هنا واضغط Enter..." />
+            <button id="ai-chat-send-btn" class="btn-primary" style="padding: 0.6rem 1.15rem;">
+              <span>إرسال</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transform: rotate(180deg);"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- العمود الثاني: رفع PDF، توليد الملخص، والاختبار التفاعلي -->
+        <div class="ai-tools-card">
+          
+          <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.5rem;">
+            أدوات تحليل المواد والامتحانات الذاتية
+          </h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+            اختر ملف المحاضرة (PDF) من حاسوبك لتوليد ملخص منظم أو إجراء اختبار فوري لتقييم مستواك.
+          </p>
+
+          <!-- منطقة الرفع المباشر لملفات الـ PDF -->
+          <div id="pdf-dropzone" class="pdf-dropzone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="12" y1="18" x2="12" y2="12"></line>
+              <line x1="9" y1="15" x2="15" y2="15"></line>
+            </svg>
+            <div style="font-weight: 700; color: var(--primary-800); margin-bottom: 0.25rem;">
+              انقر لاختيار ملف PDF أو اسحبه وأفلته هنا
+            </div>
+            <div style="font-size: 0.78rem; color: var(--text-muted);">
+              سلايدات المحاضرات، ملخصات المواد، أو نماذج الامتحانات (PDF)
+            </div>
+            <input type="file" id="pdf-file-input" accept=".pdf,application/pdf" style="display: none;" />
+          </div>
+
+          <!-- شريط معلومات الملف المرفوع -->
+          <div id="file-info-bar" class="file-info-bar">
+            <div style="display: flex; align-items: center; gap: 0.5rem; overflow: hidden;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                <strong id="file-name-display">lecture_notes.pdf</strong>
+                <span id="file-size-display" style="font-size: 0.78rem; color: #15803d; margin-right: 0.5rem;" class="tabular-nums"></span>
+              </div>
+            </div>
+            <button id="btn-remove-pdf" class="btn-outline-danger" style="padding: 0.2rem 0.5rem; font-size: 0.75rem;">
+              إلغاء الملف
+            </button>
+          </div>
+
+          <!-- أزرار الإجراءات التفاعلية -->
+          <div class="ai-tool-buttons">
+            <button id="btn-generate-summary" class="btn-primary" style="background-color: var(--primary-700);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+              توليد ملخص دراسي
+            </button>
+
+            <button id="btn-generate-quiz" class="btn-primary" style="background-color: var(--accent-purple);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              توليد اختبار تدريبي (Quiz)
+            </button>
+          </div>
+
+          <!-- نتيجة الملخص الدراسي -->
+          <div id="summary-result-box" class="summary-result-box">
+            <h4>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <span id="summary-doc-title">الملخص الدراسي المقترح</span>
+            </h4>
+            <ul id="summary-points-list" class="summary-points-list">
+              <!-- تُملأ عبر JavaScript -->
+            </ul>
+          </div>
+
+          <!-- حاوية الاختبار التفاعلي الذاتي (Interactive Quiz) -->
+          <div id="quiz-container" class="quiz-container">
+            <div id="quiz-active-question-box">
+              <div class="quiz-header">
+                <span>سؤال <span id="quiz-current-num" class="tabular-nums">1</span> من <span id="quiz-total-num" class="tabular-nums">5</span></span>
+                <span>اختبار ذاتي تفاعلي</span>
+              </div>
+              <div id="quiz-question-text" class="quiz-question-text">
+                نص السؤال سيظهر هنا
+              </div>
+              <div id="quiz-options-container" class="quiz-options-list">
+                <!-- خيارات السؤال -->
+              </div>
+              <div id="quiz-feedback-box" class="quiz-feedback-box">
+                <!-- التغذية الراجعة والتصحيح -->
+              </div>
+            </div>
+
+            <!-- بطاقة النتيجة النهائية للاختبار -->
+            <div id="quiz-score-summary" class="quiz-score-summary">
+              <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🎉</div>
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary-900); margin-bottom: 0.25rem;">اكتمل الاختبار الذاتي بنجاح!</h3>
+              <div id="quiz-final-score" class="quiz-score-number tabular-nums">4 / 5</div>
+              <p id="quiz-final-msg" style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.25rem;">أداء ممتاز ورائع!</p>
+              <button class="btn-primary" onclick="App.handleGenerateQuiz()">إعادة الاختبار من جديد</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- -------------------------------------------------------------------
+         القسم السادس: المفضلة وطلباتي (Saved & Applications View)
+         ------------------------------------------------------------------- -->
+    <section id="view-saved" class="view-section">
+      
+      <div class="section-header-block">
+        <div>
+          <h2 class="section-title">المفضلة وطلبات التدريب الخاصة بي</h2>
+          <p class="section-desc">
+            متابعة فورية للكتب والسكنات وفرص التدريب التي قمت بحفظها، بالإضافة إلى سجل الطلبات التي قدمتها محلياً.
+          </p>
+        </div>
+      </div>
+
+      <!-- أزرار التبويبات الفرعية -->
+      <div class="saved-tabs-bar">
+        <button class="saved-tab-btn active" data-tab="applications">طلبات التدريب المرسلة</button>
+        <button class="saved-tab-btn" data-tab="books">الكتب المحفوظة</button>
+        <button class="saved-tab-btn" data-tab="internships">فرص التدريب المفضلة</button>
+        <button class="saved-tab-btn" data-tab="housing">السكنات المفضلة</button>
+      </div>
+
+      <!-- محتوى تبويب طلبات التدريب -->
+      <div id="tab-content-applications" class="saved-tab-content">
+        <div id="my-applications-container">
+          <!-- يتم ملؤها عبر JavaScript -->
+        </div>
+      </div>
+
+      <!-- محتوى تبويب الكتب المحفوظة -->
+      <div id="tab-content-books" class="saved-tab-content" style="display: none;">
+        <div id="fav-books-container">
+          <!-- يتم ملؤها عبر JavaScript -->
+        </div>
+      </div>
+
+      <!-- محتوى تبويب فرص التدريب المفضلة -->
+      <div id="tab-content-internships" class="saved-tab-content" style="display: none;">
+        <div id="fav-internships-container">
+          <!-- يتم ملؤها عبر JavaScript -->
+        </div>
+      </div>
+
+      <!-- محتوى تبويب السكنات المفضلة -->
+      <div id="tab-content-housing" class="saved-tab-content" style="display: none;">
+        <div id="fav-housing-container">
+          <!-- يتم ملؤها عبر JavaScript -->
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- =======================================================================
+       النوافذ المنبثقة التفاعلية (Modals)
+       ======================================================================= -->
+
+  <!-- نافذة إضافة / تعديل إعلان كتاب -->
+  <div id="book-form-modal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="book-modal-title" class="modal-title">إضافة كتاب جامعي للتبادل</h3>
+        <button class="modal-close-btn" aria-label="إغلاق النافذة">✕</button>
+      </div>
+      <form id="book-form">
+        <div class="modal-body">
+          <div class="form-grid">
+            <div class="form-group col-span-2">
+              <label class="form-label" for="input-book-title">اسم الكتاب / المرجع الجامعي *</label>
+              <input type="text" id="input-book-title" class="form-input" required placeholder="مثال: حساب التفاضل والتكامل 2" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="input-book-course">اسم ورمز المادة الدراسية *</label>
+              <input type="text" id="input-book-course" class="form-input" required placeholder="مثال: MATH 102" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="input-book-major">الكلية / التخصص *</label>
+              <input type="text" id="input-book-major" class="form-input" required placeholder="مثال: كلية الهندسة / علم الحاسوب" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="input-book-university">الجامعة أو الكلية</label>
+              <select id="input-book-university" class="form-select">
+                <option value="جامعة البلقاء التطبيقية - المركز (السلط)">جامعة البلقاء التطبيقية - المركز (السلط)</option>
+                <option value="جامعة البلقاء - كلية الهندسة التكنولوجية (البوليتكنك)">جامعة البلقاء - الهندسة التكنولوجية (البوليتكنك)</option>
+                <option value="جامعة البلقاء التطبيقية - كلية الحصن">جامعة البلقاء التطبيقية - كلية الحصن</option>
+                <option value="الجامعة الأردنية">الجامعة الأردنية</option>
+                <option value="جامعة العلوم والتكنولوجيا الأردنية">جامعة العلوم والتكنولوجيا الأردنية</option>
+                <option value="الجامعة الهاشمية">الجامعة الهاشمية</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="input-book-condition">حالة الكتاب</label>
+              <select id="input-book-condition" class="form-select">
+                <option value="ممتاز">ممتاز (شبه جديد)</option>
+                <option value="جيد جداً">جيد جداً</option>
+                <option value="جيد">جيد (مستعمل مع ملاحظات)</option>
+                <option value="مجاني للإعارة">مجاني للإعارة التكافلية</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="input-book-price">السعر بالدينار الأردني (0 للمجاني)</label>
+              <input type="number" id="input-book-price" class="form-input" min="0" step="0.5" value="5" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="input-book-theme">لون غلاف البطاقة التعبيري</label>
+              <select id="input-book-theme" class="form-select">
+                <option value="theme-eng">هندسي / تقني داكن</option>
+                <option value="theme-cs">حاسوب وبرمجيات (أزرق ملكي)</option>
+                <option value="theme-med">طبي وتمريض (زمردي)</option>
+                <option value="theme-biz">أعمال وإدارة (عنبري)</option>
+                <option value="theme-science">علوم أساسية (بنفسجي)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="input-book-seller">اسم المعلن / الطالب *</label>
+              <input type="text" id="input-book-seller" class="form-input" required placeholder="اسمك الكريم" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="input-book-phone">رقم هاتف / واتساب للتواصل *</label>
+              <input type="tel" id="input-book-phone" class="form-input" required placeholder="مثال: 0791234567" />
+            </div>
+
+            <div class="form-group col-span-2">
+              <label class="form-label" for="input-book-location">مكان التسليم المفضل داخل الحرم</label>
+              <input type="text" id="input-book-location" class="form-input" placeholder="مثال: مكتبة الجامعة المركزية، مجمع القاعات بالسلط" />
+            </div>
+
+            <div class="form-group col-span-2">
+              <label class="form-label" for="input-book-desc">وصف الكتاب والملاحظات</label>
+              <textarea id="input-book-desc" class="form-textarea" placeholder="اذكر الطبعة، وجود حلول سنوات سابقة، أو أي تفاصيل تفيد الطالب..."></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary modal-close-btn">إلغاء</button>
+          <button type="submit" class="btn-primary">حفظ ونشر الإعلان</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- نافذة عرض تفاصيل الكتاب -->
+  <div id="book-details-modal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">تفاصيل الكتاب ومعلومات التواصل</h3>
+        <button class="modal-close-btn" aria-label="إغلاق النافذة">✕</button>
+      </div>
+      <div id="book-details-body" class="modal-body">
+        <!-- تملأ ديناميكياً -->
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة عرض تفاصيل فرصة التدريب -->
+  <div id="internship-details-modal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">تفاصيل الفرصة التدريبية</h3>
+        <button class="modal-close-btn" aria-label="إغلاق النافذة">✕</button>
+      </div>
+      <div id="internship-details-body" class="modal-body">
+        <!-- تملأ ديناميكياً -->
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة نموذج التقديم على فرصة التدريب -->
+  <div id="apply-form-modal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title">تقديم طلب تدريب ميداني</h3>
+          <p id="apply-modal-target-title" style="font-size: 0.85rem; color: var(--primary-700); font-weight: 700;"></p>
+        </div>
+        <button class="modal-close-btn" aria-label="إغلاق النافذة">✕</button>
+      </div>
+      <form id="internship-apply-form">
+        <input type="hidden" id="apply-intern-id" />
+        <div class="modal-body">
+          <div class="form-grid">
+            <div class="form-group col-span-2">
+              <label class="form-label" for="apply-name">الاسم الرباعي للطالب *</label>
+              <input type="text" id="apply-name" class="form-input" required placeholder="مثال: محمد عبدالله خالد الزعبي" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="apply-student-id">الرقم الجامعي *</label>
+              <input type="text" id="apply-student-id" class="form-input" required placeholder="مثال: 320210045" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="apply-uni">الجامعة أو الكلية</label>
+              <select id="apply-uni" class="form-select">
+                <option value="جامعة البلقاء التطبيقية - المركز (السلط)">جامعة البلقاء التطبيقية - المركز (السلط)</option>
+                <option value="جامعة البلقاء - كلية الهندسة التكنولوجية (البوليتكنك)">جامعة البلقاء - الهندسة التكنولوجية (البوليتكنك)</option>
+                <option value="جامعة البلقاء التطبيقية - كلية الحصن">جامعة البلقاء التطبيقية - كلية الحصن</option>
+                <option value="الجامعة الأردنية">الجامعة الأردنية</option>
+                <option value="جامعة العلوم والتكنولوجيا الأردنية">جامعة العلوم والتكنولوجيا الأردنية</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="apply-major">التخصص الأكاديمي *</label>
+              <input type="text" id="apply-major" class="form-input" required placeholder="مثال: هندسة البرمجيات" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="apply-gpa">المعدل التراكمي (GPA)</label>
+              <input type="text" id="apply-gpa" class="form-input" placeholder="مثال: 3.45 من 4 أو جيد جداً" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="apply-phone">رقم الهاتف للتواصل *</label>
+              <input type="tel" id="apply-phone" class="form-input" required placeholder="مثال: 0791234567" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="apply-email">البريد الإلكتروني الجامعي أو الشخصي</label>
+              <input type="email" id="apply-email" class="form-input" placeholder="student@bau.edu.jo" />
+            </div>
+
+            <div class="form-group col-span-2">
+              <label class="form-label" for="apply-notes">نبذة عن مهاراتك ولماذا ترغب بهذا التدريب؟</label>
+              <textarea id="apply-notes" class="form-textarea" placeholder="اذكر مشاريعك السابقة، اللغات البرمجية التي تتقنها، أو طموحاتك المهنية..."></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary modal-close-btn">إلغاء</button>
+          <button type="submit" class="btn-primary">إرسال طلب التدريب محلياً</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- نافذة تفاصيل السكن الطلابي -->
+  <div id="housing-details-modal" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">تفاصيل السكن الطلابي</h3>
+        <button class="modal-close-btn" aria-label="إغلاق النافذة">✕</button>
+      </div>
+      <div id="housing-details-body" class="modal-body">
+        <!-- تملأ ديناميكياً -->
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة تأكيد الحذف المخصصة (Custom Confirm Modal) -->
+  <div id="delete-confirm-modal" class="modal-backdrop">
+    <div class="modal-card" style="max-width: 440px;">
+      <div class="modal-header">
+        <h3 class="modal-title" style="color: var(--accent-rose);">تأكيد الحذف</h3>
+        <button class="modal-close-btn" aria-label="إغلاق النافذة">✕</button>
+      </div>
+      <div class="modal-body">
+        <p id="delete-modal-msg" style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+          هل أنت متأكد من حذف هذا العنصر؟ لا يمكن استرجاعه بعد الحذف.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-secondary modal-close-btn">إلغاء</button>
+        <button type="button" id="btn-confirm-delete" class="btn-primary" style="background-color: var(--accent-rose);">نعم، تأكيد الحذف</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- حاوية التوست للإشعارات المنبثقة -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- =======================================================================
+       تذييل الموقع (Footer)
+       ======================================================================= -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+          <div class="brand-icon-box" style="width: 32px; height: 32px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path></svg>
+          </div>
+          <strong style="font-size: 1.15rem; color: var(--primary-900);">Student Hub Jordan</strong>
+        </div>
+        <p>
+          منصة طلابية أردنية متكاملة مخصصة لخدمة طلبة جامعة البلقاء التطبيقية والجامعات الرسمية، تعمل محلياً بالكامل من خلال المتصفح بدون أي تبعات خادم أو قواعد بيانات سحابية خارجية.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
+        <ul class="footer-links">
+          <li><a href="#dashboard" data-nav-target="dashboard">لوحة التحكم الرئيسية</a></li>
+          <li><a href="#books" data-nav-target="books">سوق تبادل الكتب</a></li>
+          <li><a href="#internships" data-nav-target="internships">فرص التدريب الميداني</a></li>
+          <li><a href="#housing" data-nav-target="housing">دليل السكنات بالسلط</a></li>
+          <li><a href="#ai" data-nav-target="ai">مساعد المذاكرة الذكي</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>الجامعات المدعومة</h4>
+        <ul class="footer-links">
+          <li>جامعة البلقاء التطبيقية (المركز - السلط)</li>
+          <li>كلية الهندسة التكنولوجية (البوليتكنك)</li>
+          <li>كلية الحصن الجامعية (إربد)</li>
+          <li>الجامعة الأردنية (عمان)</li>
+          <li>جامعة العلوم والتكنولوجيا الأردنية</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>إدارة البيانات المحلية</h4>
+        <p style="margin-bottom: 1rem;">
+          يتم حفظ كافة الكتب والطلبات في ذاكرة التخزين المحلية (localStorage) لجهازك مباشرة.
+        </p>
+        <button id="btn-reset-demo-data" class="btn-secondary" style="font-size: 0.82rem; padding: 0.45rem 0.85rem;">
+          إعادة ضبط البيانات التجريبية
+        </button>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        جميع الحقوق محفوظة &copy; 2026 Student Hub Jordan · تم التطوير لخدمة الطلبة الجامعيين في المملكة الأردنية الهاشمية
+      </div>
+      <div style="font-weight: 600;">
+        عمان · السلط · إربد · الزرقاء
+      </div>
+    </div>
+  </footer>
+
+  <!-- ملف الجافاسكريبت المستقل للتحكم والتفاعل -->
+  <script src="/script.js"></script>
+</body>
+</html>
